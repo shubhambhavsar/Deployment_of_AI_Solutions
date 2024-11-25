@@ -42,7 +42,7 @@ The project showcases containerization using Docker, CI/CD pipeline automation w
 Clone the repository:
    ```bash
    git clone https://github.com/shubhambhavsar/Deployment_of_AI_Solutions.git
-
+```
 ### Set Up Python Environment
 Create a virtual environment and activate it:
 ```bash
