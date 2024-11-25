@@ -4,22 +4,22 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                sh 'python -m pip install -r requirements.txt'
             }
         }
         stage('Test') {
             steps {
-                bat 'pytest'
+                sh 'pytest'
             }
         }
         stage('Docker Build') {
             steps {
-                bat 'docker build -t deployment_app .'
+                sh 'docker build -t deployment_app .'
             }
         }
         stage('Deploy to Minikube') {
             steps {
-                bat 'kubectl apply -f k8s/deployment.yaml'
+                sh 'kubectl apply -f k8s/deployment.yaml'
             }
         }
     }
