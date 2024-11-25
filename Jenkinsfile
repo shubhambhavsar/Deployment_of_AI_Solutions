@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'python -m pip install -r requirements.txt'
+                bat '"C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt'
             }
         }
         stage('Test') {
             steps {
-                bat 'pytest'
+                bat '"C:\\Users\\user\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pytest'
             }
         }
         stage('Docker Build') {
@@ -24,4 +24,3 @@ pipeline {
         }
     }
 }
-
