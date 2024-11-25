@@ -10,7 +10,25 @@ The project showcases containerization using Docker, CI/CD pipeline automation w
 - **Testing Framework:** Automated testing with Pytest ensures application robustness.
 
 ## Repository Structure
-├── ansible # Ansible playbooks for configuration management │ ├── deploy.yaml # Deployment playbook │ └── inventory.ini # Ansible inventory file ├── data # Data files for the AI application │ └── sample.csv ├── k8s # Kubernetes YAML configurations │ ├── deployment.yaml # Kubernetes deployment configuration │ └── service.yaml # Kubernetes service configuration ├── src # Source code of the AI application │ ├── app.py # Flask application │ ├── analysis.py # Data analysis script ├── tests # Pytest test scripts │ └── test_analysis.py ├── deployment_app.dockerfile # Dockerfile for building the application ├── Jenkinsfile # Jenkins pipeline for CI/CD ├── requirements.txt # Python dependencies ├── README.md # Documentation
+```
+├── ansible # Ansible playbooks for configuration management 
+│ ├── deploy.yaml # Deployment playbook 
+│ └── inventory.ini # Ansible inventory file 
+├── data # Data files for the AI application 
+│ └── sample.csv 
+├── k8s # Kubernetes YAML configurations 
+│ ├── deployment.yaml # Kubernetes deployment configuration 
+│ └── service.yaml # Kubernetes service configuration 
+├── src # Source code of the AI application 
+│ ├── app.py # Flask application 
+│ ├── analysis.py # Data analysis script 
+├── tests # Pytest test scripts 
+│ └── test_analysis.py 
+├── deployment_app.dockerfile # Dockerfile for building the application 
+├── Jenkinsfile # Jenkins pipeline for CI/CD 
+├── requirements.txt # Python dependencies 
+├── README.md # Documentation
+```
 
 ## Getting Started
 
