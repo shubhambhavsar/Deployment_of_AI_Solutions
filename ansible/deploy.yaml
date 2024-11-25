@@ -1,0 +1,29 @@
+---
+- name: Configure localhost and deploy application
+  hosts: localhost
+  become: yes
+  tasks:
+    - name: Update apt cache
+      ansible.builtin.apt:
+        update_cache: yes
+
+    - name: Install python3-apt
+      ansible.builtin.apt:
+        name: python3-apt
+        state: present
+
+    - name: Ensure Docker is installed
+      ansible.builtin.apt:
+        name: docker.io
+        state: present
+
+    - name: Install kubectl
+      shell: |
+        curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+        chmod +x kubectl
+        mv kubectl /usr/local/bin/kubectl
+      args:
+        creates: /usr/local/bin/kubectl
+
+    - name: Deploy application using Kubernetes
+      command: kubectl apply -f k8s/deployment.yaml
