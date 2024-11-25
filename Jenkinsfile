@@ -16,7 +16,7 @@ pipeline {
         }
         stage('Docker Build') {
             steps {
-                bat 'docker build -t deployment_app .'
+                bat 'docker build -t deployment_of_ai_solutions:latest -f deployment_app.dockerfile .'
             }
         }
         stage('Deploy to Minikube') {
